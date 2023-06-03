@@ -1,0 +1,9 @@
+FROM node:alpine
+WORKDIR /tic-tac-toe
+COPY ./package.json /tic-tac-toe
+RUN npm install
+COPY . /tic-tac-toe
+CMD [ "npm", "run","start" ]
+
+# FROM nginx:alpine
+# COPY . /usr/share/nginx/html
